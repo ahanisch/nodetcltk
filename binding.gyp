@@ -12,6 +12,12 @@
         "/opt/X11/include/",
         "<!(node -e \"require('nan')\")"
       ],
+       'conditions': [
+        ['OS=="linux"', {
+            'include_dirs': ['/usr/include/tcl8.5'],
+          }
+        ]
+      ],
       'xcode_settings': {
         'GCC_ENABLE_CPP_RTTI': 'YES',
         'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
